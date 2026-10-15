@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Müesser İrem Geçici | İletişim & Bağlantılar</title>
+  <meta name="description" content="Müesser İrem Geçici - E-Posta (iremgecici2@gmail.com), LinkedIn ve GitHub iletişim kanalları ve doğrudan mesaj iletimi.">
+  <link rel="stylesheet" href="styles.css?v=20261013_v7">
+</head>
+<body>
+
+  <!-- TÜM EKRANI KAPLAYAN VİVİD GÖRSEL ARKA PLAN VE CANLI VERİ AKIŞI KATMANLARI -->
+  <div class="bg-fullscreen-image"></div>
+  <div class="bg-ambient-glow"></div>
+  <canvas id="nodeCanvas" class="bg-canvas-nodes"></canvas>
+
+  <!-- Yönetici / İçerik Düzenleme Modu Üst Çubuğu -->
+  <div id="editBanner" class="edit-mode-banner">
+    <span>⚡ DÜZENLEME MODU AKTİF — Metinlerin üzerine tıklayarak düzenleyebilir, iletişim bilgilerinizi güncelleyebilirsiniz!</span>
+    <div class="edit-banner-actions">
+      <button id="btnSaveData" class="btn-edit-action" title="Değişiklikleri Kaydet">💾 Kaydet</button>
+      <button id="btnResetData" class="btn-edit-action" title="Varsayılan Verilere Dön">🔄 Sıfırla</button>
+    </div>
+  </div>
+
+  <!-- Üst Navigasyon (Navbar) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">📊</div>
+        <span id="siteLogoName" class="editable-field">Müesser İrem Geçici</span>
+      </a>
+
+      <!-- Çok Sayfalı Navigasyon Bağlantıları -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-tab">Hakkımda</a>
+        <a href="education.html" class="nav-tab">Eğitim & Kurslar</a>
+        <a href="projects.html" class="nav-tab">Projeler</a>
+        <a href="contact.html" class="nav-tab active">İletişim</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button id="btnToggleEdit" class="btn-toggle-edit">
+          <span id="editIcon">✏️</span>
+          <span id="editText">Düzenleme Modu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ana İçerik Alanı: İLETİŞİM -->
+  <main class="main-wrapper">
+    <section id="contact" class="page-section waterfall-flow">
+      <div class="section-title-wrapper" style="margin-top: 0;">
+        <h2 class="section-h2">📬 İletişim & İş Birliği</h2>
+      </div>
+
+      <div class="contact-grid-3">
+        
+        <div class="contact-intro-box">
+          <h3 id="contactIntroTitle" class="contact-intro-title editable-field">İletişime Geçin</h3>
+          <p id="contactIntroText" class="contact-intro-p editable-field">
+            Büyük veri analizi, makine öğrenmesi projeleri ve veri odaklı iş birliği fırsatları için benimle doğrudan iletişime geçebilirsiniz.
+          </p>
+        </div>
+
+        <!-- E-Posta -->
+        <a id="emailLink" href="mailto:iremgecici2@gmail.com" class="contact-card-link" title="E-Posta Gönder">
+          <div class="contact-icon-box">✉️</div>
+          <div class="contact-info-text">
+            <span class="contact-label">E-Posta Adresi</span>
+            <span id="contactEmail" class="contact-value editable-field">iremgecici2@gmail.com</span>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a id="linkedinLink" href="https://www.linkedin.com/in/m%C3%BCesser-irem-gecici-a684a8345" target="_blank" rel="noopener noreferrer" class="contact-card-link" title="LinkedIn Profilime Git">
+          <div class="contact-icon-box">💼</div>
+          <div class="contact-info-text">
+            <span class="contact-label">LinkedIn Profili</span>
+            <span id="contactLinkedin" class="contact-value editable-field">linkedin.com/in/müesser-irem-gecici</span>
+          </div>
+        </a>
+
+        <!-- GitHub -->
+        <a id="githubLink" href="https://github.com/irewm11" target="_blank" rel="noopener noreferrer" class="contact-card-link" title="GitHub Sayfama Git">
+          <div class="contact-icon-box">🐙</div>
+          <div class="contact-info-text">
+            <span class="contact-label">GitHub Hesabı</span>
+            <span id="contactGithub" class="contact-value editable-field">github.com/irewm11</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Doğrudan Mesaj & Dosya İletme Formu -->
+      <div class="contact-form-wrapper">
+        <div class="contact-form-header">
+          <h3 class="contact-form-title">✉️ Bana Mesaj veya Dosya İletin</h3>
+          <p class="contact-form-subtitle">
+            Aşağıdaki form üzerinden doğrudan <strong style="color: var(--purple-accent);">iremgecici2@gmail.com</strong> adresime mesajınızı ve eklemek istediğiniz dosyayı (CV, proje dokümanı, PDF vb.) iletebilirsiniz.
+          </p>
+        </div>
+
+        <form id="directContactForm" class="direct-contact-form" action="https://formsubmit.co/iremgecici2@gmail.com" method="POST" enctype="multipart/form-data">
+          <!-- FormSubmit Yapılandırma Alanları -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="Portfolyo Web Sitesinden Yeni Mesaj!">
+
+          <div class="form-row-2">
+            <div class="form-group-field">
+              <label for="senderName" class="form-field-label">👤 Adınız & Soyadınız *</label>
+              <input type="text" id="senderName" name="name" class="form-field-input" placeholder="Örn: Ahmet Yılmaz" required>
+            </div>
+
+            <div class="form-group-field">
+              <label for="senderEmail" class="form-field-label">📧 E-Posta Adresiniz *</label>
+              <input type="email" id="senderEmail" name="email" class="form-field-input" placeholder="adiniz@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group-field">
+            <label for="msgSubject" class="form-field-label">📌 Konu *</label>
+            <input type="text" id="msgSubject" name="_subject_custom" class="form-field-input" placeholder="Örn: Proje Teklifi / Veri Analizi İş Birliği" required>
+          </div>
+
+          <div class="form-group-field">
+            <label for="msgText" class="form-field-label">💬 Mesajınız *</label>
+            <textarea id="msgText" name="message" class="form-field-textarea" rows="4" placeholder="İletmek istediğiniz notu veya detayları buraya yazınız..." required></textarea>
+          </div>
+
+          <div class="form-group-field">
+            <label for="fileAttachment" class="form-field-label">📎 Dosya Eki (Opsiyonel - PDF, Word, Excel, Görsel vb.)</label>
+            <div class="custom-file-upload-box" id="fileUploadContainer">
+              <input type="file" id="fileAttachment" name="attachment" class="custom-file-input">
+              <label for="fileAttachment" class="custom-file-label">
+                <span class="file-icon">📁</span>
+                <span id="fileNameLabel" class="file-text">Bilgisayarınızdan dosya seçin veya sürükleyin...</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-submit-row">
+            <button type="submit" id="btnSubmitMessage" class="btn-submit-mail">
+              <span>🚀 Web Formu ile Gönder</span>
+            </button>
+            <button type="button" id="btnSendViaGmail" class="btn-gmail-compose" title="Doğrudan tarayıcınızda Gmail ile açın ve gönderin">
+              <span>🔴 Gmail ile Aç & Gönder</span>
+            </button>
+            <button type="button" id="btnOpenMailClient" class="btn-open-mail-client" title="Varsayılan E-Posta uygulamanızla (Outlook / Mail) gönderin">
+              <span>📬 E-Posta Uygulamasıyla Aç</span>
+            </button>
+          </div>
+
+          <div id="formSendStatus" class="form-status-alert" style="display: none;"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="yearSpan"></span> <span class="editable-field" id="footerName">Müesser İrem Geçici | Büyük Veri Analisti</span>. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="app.js?v=20261013_v7"></script>
+</body>
+</html>
