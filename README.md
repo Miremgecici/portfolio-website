@@ -3,6 +3,8 @@
 BVA 2205 Siber Güvenlik ve Bilişim Hukuku — Bireysel ödev · 2516016027
 Next.js (App Router) · PostgreSQL (Neon) · SQL
 
+Canlı site: https://portfolyo-muesser-irem-gecici.vercel.app
+
 ## Sayfalar
 
 | Adres | İçerik |
