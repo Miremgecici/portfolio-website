@@ -2,13 +2,15 @@
   "name": "portfolyo-muesser-irem-gecici",
   "version": "2.0.0",
   "private": true,
-  "description": "Müesser İrem Geçici – kişisel portfolyo sitesi",
+  "description": "Müesser İrem Geçici – kişisel portfolyo sitesi ve yönetim paneli (BVA 2205)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "bcryptjs": "^3.0.2",
     "next": "^16.0.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1"

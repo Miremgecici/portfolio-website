@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 // yukarıdan akarak gelir. JavaScript çalışmazsa içerik zaten görünür kalır.
 const SECICILER = [
   '.hero', '.ozet', '.sayfa-baslik', '.bolum-baslik', '.yetenek', '.deneyim',
-  '.egitim-kart', '.kurs', '.filtre', '.proje', '.iletisim-kart', '.form-kart',
+  '.egitim-kart', '.kurs', '.filtre', '.proje', '.tasarim', '.tablo-kutu', '.iletisim-kart', '.form-kart',
 ].join(', ');
 
 export default function Selale() {

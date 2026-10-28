@@ -34,8 +34,25 @@ export default function Iletisim() {
 
       <section className="cam-kart form-kart">
         <h2>Bana mesaj gönderin</h2>
-        <p>Formu doldurun, mesajınız doğrudan e-posta adresime ulaşsın.</p>
+        <p>Formu doldurun, mesajınızı okuyup e-posta ile dönüş yapayım.</p>
         <IletisimFormu eposta={c.eposta} />
+
+        <details className="aydinlatma" id="aydinlatma">
+          <summary>KVKK Aydınlatma Metni</summary>
+          <p>
+            6698 sayılı Kişisel Verilerin Korunması Kanunu uyarınca veri sorumlusu {cv.adSoyad}&apos;dir. Bu formla
+            paylaştığınız ad soyad, e-posta adresi ve mesaj içeriği yalnızca mesajınıza yanıt verebilmek amacıyla,
+            açık rızanıza dayanarak işlenir.
+          </p>
+          <p>
+            Verileriniz üçüncü kişilerle paylaşılmaz; sitenin barındırıldığı Vercel ve veritabanı hizmeti Neon
+            (Avrupa – Frankfurt) altyapısında saklanır ve mesajınız yanıtlandıktan sonra en geç 1 yıl içinde silinir.
+          </p>
+          <p>
+            KVKK&apos;nın 11. maddesi kapsamındaki haklarınız (verilerinize erişme, düzeltilmesini veya silinmesini
+            isteme vb.) için {c.eposta} adresine yazabilirsiniz.
+          </p>
+        </details>
       </section>
     </>
   );

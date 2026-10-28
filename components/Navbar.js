@@ -8,6 +8,7 @@ const SEKMELER = [
   { href: '/', ad: 'Hakkımda' },
   { href: '/egitim', ad: 'Eğitim & Kurslar' },
   { href: '/projeler', ad: 'Projeler' },
+  { href: '/tasarimlar', ad: 'Tasarımlar' },
   { href: '/iletisim', ad: 'İletişim', cta: true },
 ];
 

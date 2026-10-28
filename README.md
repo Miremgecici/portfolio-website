@@ -1,39 +1,37 @@
-# Müesser İrem Geçici · Portfolyo
+# Müesser İrem Geçici · Portfolyo + Yönetim Paneli
 
-Next.js (App Router) ile yapılmış kişisel portfolyo sitesi. Eski sitenin (`miremgecici/portfolio-website`)
-mor veri ağı kimliği ve tüm içeriği korunarak yenilendi.
-
-## Çalıştırma
-
-```
-npm install
-npm run dev
-```
-
-Tarayıcıda http://localhost:3000 adresini açın.
+BVA 2205 Siber Güvenlik ve Bilişim Hukuku — Bireysel ödev · 2516016027
+Next.js (App Router) · PostgreSQL (Neon) · SQL
 
 ## Sayfalar
 
-| Adres | Dosya | İçerik |
-| --- | --- | --- |
-| `/` | `app/page.js` | Hakkımda: tanıtım, fotoğraf, özet, yetenekler, deneyimler |
-| `/egitim` | `app/egitim/page.js` | Üniversite, diller, kurslar |
-| `/projeler` | `app/projeler/` | Projeler ve durum filtresi |
-| `/iletisim` | `app/iletisim/` | E-posta, LinkedIn, GitHub ve mesaj formu |
+| Adres | İçerik |
+| --- | --- |
+| `/` | Hakkımda, yetenekler, deneyimler |
+| `/egitim` | Üniversite, diller, kurslar |
+| `/projeler` | Projeler ve durum filtresi |
+| `/tasarimlar` | **Tasarım Çalışmalarım** (veritabanından) + "Öne çıkanlar" |
+| `/iletisim` | İletişim kanalları + KVKK onaylı mesaj formu (veritabanına kaydeder) |
+| `/lisanslar` | Üçüncü taraf varlıklar ve lisansları (veritabanından) |
+| `/giris` | Yönetici girişi |
+| `/admin` | Panel: okunmamış mesaj ve tasarım sayıları |
+| `/admin/tasarimlar` | Tasarım ekle / düzenle / sil / yayına al-kaldır, tür ekle-sil |
+| `/admin/mesajlar` | İletişim mesajları, okundu işaretleme, silme |
+| `/admin/oturumlar` | Açık oturumlar, "Diğer tüm oturumları kapat" |
+
+## Kurulum
+
+1. Neon'da tabloları oluşturun: `sql/sorgular.sql` (yönetici şifre özetini kendiniz üretin).
+2. Vercel → Settings → Environment Variables → `DATABASE_URL` = Neon bağlantı adresi.
+3. Bilgisayarda çalıştırmak için: `.env.example` dosyasını `.env.local` olarak kopyalayıp adresi yazın,
+   sonra `npm install` ve `npm run dev`.
+
+`.env.local` GitHub'a **gönderilmez** (`.gitignore` içinde `.env*`).
 
 ## İçeriği değiştirme
 
-Bütün yazılar **`content/cv.js`** dosyasında. Sayfaların kodunu açmadan yeni proje, kurs, yetenek ya da
-deneyim ekleyebilirsiniz.
+- Hakkımda / eğitim / projeler / iletişim yazıları: `content/cv.js`
+- Tasarım çalışmaları: yönetim panelinden (`/giris`)
+- Tasarım görselleri: `public/tasarimlar/` klasörüne koyup panelde `/tasarimlar/dosya.png` yazın
 
-- **Profil fotoğrafı:** resmi `public/assets/` klasörüne koyun, `cv.js` içinde `profilFoto: '/assets/foto.jpg'` yazın.
-- **Renkler:** `app/globals.css` dosyasının en üstündeki `:root` bölümünde.
-- **Arka plan animasyonu:** `components/Arkaplan.js`.
-- **İletişim formu:** şimdilik FormSubmit ile e-postaya gönderiyor. İlk mesajda FormSubmit,
-  iremgecici2@gmail.com adresine bir aktivasyon e-postası yollar; bir kez onaylamanız gerekir.
-
-## Eski siteden farklar
-
-- Ziyaretçilerin de gördüğü "Düzenleme modu" kaldırıldı (değişiklikler yalnızca o tarayıcıya kaydediliyordu).
-- Emoji yerine çizgi ikonlar, yüzen menü, Hakkımda sayfasında özet şeridi.
-- Adresler: `index.html` → `/`, `education.html` → `/egitim`, `projects.html` → `/projeler`, `contact.html` → `/iletisim`.
+Kodun ayrıntılı açıklaması: **`ODEV_NOTLARI.md`**
