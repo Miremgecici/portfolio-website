@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 const devamMi = (p) => (p.durum || '').toLowerCase().includes('devam');
@@ -63,6 +64,11 @@ export default function ProjeListesi({ projeler }) {
               <div className="etiketler">
                 {p.etiketler.map((t) => <span className="etiket" key={t}>{t}</span>)}
               </div>
+              {p.link && (
+                <Link href={p.link} className="dugme ikincil" style={{ alignSelf: 'flex-start' }}>
+                  Vaka sayfası: Güvenlik ve Altyapı
+                </Link>
+              )}
             </article>
           );
         })}

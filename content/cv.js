@@ -54,6 +54,15 @@ export const cv = {
 
   projeler: [
     {
+      baslik: 'Kütüphane Popülerlik Karşılaştırıcı — Güvenli Bulut Yayını',
+      kategori: 'Bulut Bilişim & Siber Güvenlik',
+      durum: 'Tamamlandı',
+      link: '/projeler/kutuphane-populerlik',
+      aciklama:
+        'npm ve PyPI paketlerinin günlük indirme sayılarını karşılaştıran canlı veri ürünü; Cloudflare Pages üzerinde 0 TL maliyetle yayında. GitHub ve Cloudflare hesaplarında 2FA, korumalı ana dal, gitleaks ve Dependabot, SHA ile sabitlenmiş GitHub Actions, CSP ve güvenlik başlıkları. OWASP ZAP bulguları 1 orta + 1 düşükten 0’a indi; Mozilla Observatory A+ (150/100).',
+      etiketler: ['Cloudflare Pages', 'GitHub Actions', 'OWASP ZAP', 'STRIDE', 'CSP', 'Python'],
+    },
+    {
       baslik: 'Uluslararası Öğrenci Rotaları ve Makine Öğrenmesi ile Maliyet Analizi',
       kategori: 'Makine Öğrenmesi & Veri Analizi',
       durum: 'Tamamlandı',
